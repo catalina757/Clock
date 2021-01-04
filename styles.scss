@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'digits';
+    src: url('digits.ttf');
+}
+
+body {
+    background-image: linear-gradient(to left top, #355e2e, #2AF00B);
+    background-size: cover;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    align-self: center;
+    border: 5vw solid #000000;
+    width: 50vw;
+}
+
+.foot {
+    width: 3vw;
+    height: 4vw;
+    background-color: #000000;
+    align-self: center;
+}
+
+.activate-alarm button {
+    background-color: #000000;
+    color: #355e2e;
+    font-size: 2vw;
+    font-weight: bold;
+    border: 1vw solid #000000;
+    width: 30vw;
+}
+
+#setAlarm {
+    width: 30vw;
+    display: none;
+    justify-content: center;
+    flex-flow: wrap;
+    align-self: center;
+}
+
+#setAlarm > input {
+    background-color: #355e2e;
+    border: 1px solid #000000;
+    width: 10vw;
+    height: 3vw;
+    font-size: 2vw;
+}
+
+.week-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 2vw;
+}
+
+.week-days > div {
+    opacity: 0.2;
+}
+
+.active {
+    opacity: 1 !important;
+    font-weight: bold;
+}
+
+.clock {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.icon-clock, .periods {
+    align-self: end;
+    font-size: 2.5vw;
+}
+
+.time {
+    font-size: 8vw;
+}
+
+.icon-clock, p {
+    margin: 0;
+    opacity: 0.2;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 80vw;
+    }
+
+    .icon-clock, .week-days, .periods {
+        font-size: 4vw;
+    }    
+
+    .time {
+        font-size: 14vw;
+    }
+    .activate-alarm {
+        margin-top: -3px;
+    }
+}
